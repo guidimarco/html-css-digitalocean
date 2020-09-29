@@ -1,7 +1,24 @@
-/* RESET E NORMALIZZAZIONE */
+/* ----- RESET E NORMALIZZAZIONE ----- */
 body {
     font-family: Roboto, sans-serif;
-    font-size: 16px;
+}
+
+h1 {
+    font-size: 31px;
+    line-height: 120%;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 36px;
+    font-weight: bold;
+    margin: auto;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
 }
 
 ul {
@@ -9,12 +26,18 @@ ul {
     margin-bottom: 0;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+/* ----- ALL DOC ----- */
+.highlight {
+    background-color: rgb(0,215,210);
+    color: rgb(3,27,78);
+    font-size: 9px;
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin-right: 10px;
 }
 
-/* ALL DOC */
+/* ----- ALL DOC ----- */
+/* ----- SIMBOLI ----- */
 .narrow-right::after {
     content: "\f105";
     font-family: "Font Awesome 5 Free";
@@ -27,62 +50,130 @@ a {
     font-weight: bold;
     color: #5b6886;
 }
+/* ----- FINE SIMBOLI ----- */
 
+/* ----- ALL DOC ----- */
+/* ----- BUTTONS ----- */
 .btn {
     font-weight: bold;
-    transition: all 0.25s linear;
+    padding: 8px 16px;
+    transition: all 0.25s;
+}
+
+.btn-lg {
+    font-size: 18px;
+    padding: 15px 20px;
 }
 
 .btn-primary {
     background-color: #006aff;
-    border-color: transparent;
+    border-color: #006aff;
     color: #fff;
 }
 
-/* HEADER */
-/* ----- */
-/* ----- */
-header a {
+.btn-primary:hover {
+    background-color: #1633ff;
+    border-color: #1633ff;
+}
+
+#header-btm .btn-primary:hover {
+    background-color: #006aff;
+    border-color: #006aff;
+}
+
+.btn-outline-primary {
+    background-color: transparent;
+    border-color: #006aff;
+    color: #006aff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #006aff;
+    color: #fff;
+}
+
+.form-sign-up .btn-outline-primary:hover {
+    background-color: transparent;
+    border-color: #5b6886;
+    color: #363636;
+}
+
+.form-sign-up .btn-outline-primary:hover i {
+    color: #006aff;
+}
+
+#jumbotron small {
     display: inline-block;
+    margin-top: 16px;
+}
+/* ----- FINE BUTTONS ----- */
+
+/* ----- ALL DOC ----- */
+/* ----- LINKS ----- */
+a {
+    display: inline-block;
+    color: #0069ff;
+    font-size: inherit;
     font-weight: 500;
     padding: 0 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0069ff;
+    text-decoration: none;
+}
+
+header a {
+    color: hsl(221, 93%, 16%);
 }
 
 header a:hover {
     color: #006aff;
-    text-decoration: none;
 }
 
-/* HEADER */
-/* header-top */
-/* ----- */
+#header-top a {
+    color: #5b6987;
+}
+
+#header-top a:hover {
+    color: #006aff;
+}
+/* ----- FINE LINKS ----- */
+
+/* ----- ALL DOC ----- */
+/* ----- STILI ----- */
+.primary {
+    background-color: white;
+    color: #031b4e;
+}
+/* ----- FINE STILI ----- */
+
+
+/* ----- HTML ----- */
+/* ----- HEADER ----- */
+/* ----- #HEADER-TOP ----- */
 #header-top {
     height: 41px;
+    background-color: white;
     line-height: 40px;
     color: #5b6987;
     font-size: 13px;
     border-bottom: 1px solid rgb(229,232,237);
 }
 
-.new {
-    background-color: rgb(0,215,210);
-    color: rgb(3,27,78);
-    font-size: 9px;
-    border-radius: 5px;
-    padding: 5px 8px;
-    margin-right: 10px;
-}
-
-/* HEADER */
-/* nav header-btm */
-/* ----- */
+/* ----- HEADER ----- */
+/* ----- NAV #HEADER-BTM ----- */
 #header-btm {
     height: 65px;
+    background-color: white;
     line-height: 65px;
     font-size: 15px;
 }
 
-/* header-btm sx */
+/* ----- HEADER ----- */
+/* ----- NAV #HEADER-BTM ----- */
+/* ----- PULL-LEFT ----- */
 #header-btm .pull-left {
     padding-left: 15px;
 }
@@ -99,30 +190,11 @@ a.brand-logo {
     width: 170px;
 }
 
-/* header-btm dx */
+/* ----- HEADER ----- */
+/* ----- NAV #HEADER-BTM ----- */
+/* ----- PULL-LEFT ----- */
 #header-btm .pull-right {
     padding-right: 15px;
-}
-
-#header-btm .btn {
-    border-radius: 5px;
-    padding: 8px 16px;
-}
-
-.btn-primary:hover {
-    background-color: #006aff;
-    border-color: transparent;
-}
-
-.btn-sign-in {
-    background-color: transparent;
-    border-color: #006aff;
-    color: #006aff;
-}
-
-.btn-sign-in:hover {
-    background-color: #006aff;
-    color: white;
 }
 
 /* toggle */
@@ -130,9 +202,95 @@ a.brand-logo {
     color: #5b6987;
 }
 
-/* MEDIA QUERY */
-/* collasso barnav */
-@media screen and (min-width: 1085px) {
+/* ----- MAIN ----- */
+section {
+    padding: 64px 24px;
+}
+
+/* ----- MAIN ----- */
+/* ----- SECTION #JUMBOTRON ----- */
+#jumbotron {
+    color: white;
+    background-image: url(https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg);
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0 64px;
+}
+
+#jumbotron p {
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+/* main form */
+.main-form {
+    width: calc(100% + 30px);
+    background-color: white;
+    /* border-radius: 6px; */
+    margin-top: 60px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.form-title {
+    background-color: #f3f5f9;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 16px 0 12px;
+}
+
+form {
+    padding: 32px;
+}
+
+.main-form .form-group {
+    margin-bottom: 8px;
+}
+
+.main-form input {
+    height: 48px;
+    color: #031b4e;
+    border: 1px solid #e5e8ed;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 16px;
+}
+
+.main-form input:focus {
+    border-color: #0069ff;
+    outline: #0069ff;
+    box-shadow: none;
+}
+
+.form-sign-up {
+    padding: 32px;
+    border-top: 1px solid #f3f5f9;
+}
+
+.form-sign-up .row div:first-child {
+    padding-right: 0;
+}
+
+.form-sign-up button {
+    padding-left: 0;
+    padding-right: 0;
+}
+/* fine main form */
+
+
+/* ----- MEDIA QUERY ----- */
+/* collasso HEADER NAVBAR */
+@media screen and (min-width: 1100px) {
+    /* HEADER */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+    }
+
     #header-top {
         display: block!important;
     }
@@ -144,4 +302,44 @@ a.brand-logo {
     .toggle-ic {
         display: none;
     }
+
+    /* MAIN */
+    main {
+        margin-top: 106px;
+    }
 }
+
+/* formattazione MAIN FORM */
+@media screen and (min-width: 394px) {
+    .main-form {
+        max-width: 364px;
+        border-radius: 6px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* XS */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 58px;
+    }
+}
+/* SM */
+@media screen and (min-width: 992px) {
+    #jumbotron .content {
+        padding-top: 100px;
+        text-align: left;
+    }
+
+    .main-form {
+        margin-top: 0;
+    }
+
+}
+/* MD */
+@media screen and (min-width: 1140px) {
+
+}
+/* LG */
