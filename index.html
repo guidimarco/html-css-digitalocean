@@ -7,9 +7,11 @@
         <!-- favicon -->
         <link rel="shortcut icon" href="https://www.digitalocean.com/favicon.ico">
 
-        <!-- font: tipo, weight -->
+        <!-- font: Roboto, weight 300, 400, 500, 700, 900 -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
         <!-- icone - fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
         <!-- responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,11 +25,85 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <div class="col-12">
-                    <!-- contenuto -->
+            <div id="header-top" class="align-middle hidden"><!-- header top -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8"><!-- top sx -->
+                            <a href="#" class="narrow-right">
+                                <span class="text-uppercase new">new</span>
+                                Scale your business, not costs by running your apps on DigitalOcean
+                            </a>
+                        </div><!-- fine top sx -->
+                        <div class="col-md-4"><!-- top dx -->
+                            <ul class="list-unstyled list-inline pull-right">
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Docs</a>
+                                </li>
+                                <li>
+                                    <a href="#">Get Support</a>
+                                </li>
+                                <li>
+                                    <a href="#">Sales</a>
+                                </li>
+                            </ul>
+                        </div><!-- fine top dx -->
+                    </div>
                 </div>
-            </div>
+            </div><!-- fine header top -->
+
+            <nav id="header-btm"><!-- nav header btm -->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="pull-left"><!-- sx brand e menu -->
+                            <a href="#" class="brand-logo">
+                                <img src="https://images.prismic.io/www-static/49aa0a09-06d2-4bba-ad20-4bcbe56ac507_logo.png?auto=compress,format" alt="Logo della Digital Ocean">
+                            </a>
+                            <ul class="list-unstyled list-inline hidden">
+                                <li>
+                                    <a class="dropdown-symb" href="#">Products</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-symb">Solutions</a>
+                                </li>
+                                <li>
+                                    <a href="#">Marketplace</a>
+                                </li>
+                                <li>
+                                    <a href="#">Customers</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-symb">Community</a>
+                                </li>
+                                <li>
+                                    <a href="#">Pricing</a>
+                                </li>
+                            </ul>
+                        </div><!-- fine sx -->
+                        <div class="pull-right"><!-- dx bottoni -->
+                            <ul class="list-unstyled list-inline hidden">
+                                <li>
+                                    <a href="#" class="btn btn-sign-in">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-primary">Sign Up</a>
+                                </li>
+                            </ul>
+                            <div class="toggle-ic">
+                                <a href="#">
+                                    <i class="fas fa-bars"></i>
+                                </a>
+                            </div>
+                        </div><!-- fine dx -->
+                    </div>
+                </div>
+            </nav><!-- fine nav header btm -->
         </header>
+
+        <main>
+
+        </main>
     </body>
 </html>

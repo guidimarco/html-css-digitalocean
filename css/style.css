@@ -1,47 +1,147 @@
 /* RESET E NORMALIZZAZIONE */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: /** inserire **/;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    /** mettere **/
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
 }
 
 ul {
-    list-style-type: none;
-}
-
-li {
     display: inline-block;
+    margin-bottom: 0;
 }
 
 a {
-    display: inline-block;
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
-/* CLASSI GENERALI */
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+/* ALL DOC */
+.narrow-right::after {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
 }
 
-.float-left{
-    float: left;
+.dropdown-symb::after {
+    content: " \f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    color: #5b6886;
 }
 
-.float-right {
-    float: right;
+.btn {
+    font-weight: bold;
+    transition: all 0.25s linear;
 }
 
-.button {
-    /** inserire caratteristiche bottone **/
+.btn-primary {
+    background-color: #006aff;
+    border-color: transparent;
+    color: #fff;
+}
+
+/* HEADER */
+/* ----- */
+/* ----- */
+header a {
+    display: inline-block;
+    font-weight: 500;
+    padding: 0 10px;
+}
+
+header a:hover {
+    color: #006aff;
+    text-decoration: none;
+}
+
+/* HEADER */
+/* header-top */
+/* ----- */
+#header-top {
+    height: 41px;
+    line-height: 40px;
+    color: #5b6987;
+    font-size: 13px;
+    border-bottom: 1px solid rgb(229,232,237);
+}
+
+.new {
+    background-color: rgb(0,215,210);
+    color: rgb(3,27,78);
+    font-size: 9px;
+    border-radius: 5px;
+    padding: 5px 8px;
+    margin-right: 10px;
+}
+
+/* HEADER */
+/* nav header-btm */
+/* ----- */
+#header-btm {
+    height: 65px;
+    line-height: 65px;
+    font-size: 15px;
+}
+
+/* header-btm sx */
+#header-btm .pull-left {
+    padding-left: 15px;
+}
+
+a.brand-logo {
+    margin-right: 40px;
+}
+
+#header-btm .pull-left > ul {
+    color: hsl(221,93%,16%);
+}
+
+.brand-logo img {
+    width: 170px;
+}
+
+/* header-btm dx */
+#header-btm .pull-right {
+    padding-right: 15px;
+}
+
+#header-btm .btn {
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+.btn-primary:hover {
+    background-color: #006aff;
+    border-color: transparent;
+}
+
+.btn-sign-in {
+    background-color: transparent;
+    border-color: #006aff;
+    color: #006aff;
+}
+
+.btn-sign-in:hover {
+    background-color: #006aff;
+    color: white;
+}
+
+/* toggle */
+.toggle-ic {
+    color: #5b6987;
+}
+
+/* MEDIA QUERY */
+/* collasso barnav */
+@media screen and (min-width: 1085px) {
+    #header-top {
+        display: block!important;
+    }
+
+    #header-btm ul.hidden {
+        display: inline-block!important;
+    }
+
+    .toggle-ic {
+        display: none;
+    }
 }
