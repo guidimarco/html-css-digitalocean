@@ -6,6 +6,7 @@ body {
 h1 {
     font-size: 31px;
     line-height: 120%;
+    margin-top: 0;
 }
 
 h2 {
@@ -59,7 +60,7 @@ ul {
 
 /* ----- ALL DOC ----- */
 /* ----- SIMBOLI ----- */
-.narrow-right::after {
+.angle-right::after {
     content: "\f105";
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
@@ -70,6 +71,43 @@ ul {
     font-family: "Font Awesome 5 Free";
     font-weight: bold;
     color: #5b6886;
+}
+
+.arrow-left::after {
+    content: "\f30a";
+    color: #5b6886;
+    font-size: 30px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-right::after {
+    content: "\f30b";
+    color: rgb(3,27,78);
+    font-size: 30px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #0069ff;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.dot:first-child {
+    background-color: #0069ff;
 }
 /* ----- FINE SIMBOLI ----- */
 
@@ -185,6 +223,26 @@ header a:hover {
 #jumbotron small a:hover {
     border-bottom: dotted 1px rgba(255,255,255,0.5);
 }
+
+#data-center a {
+    color: #0069ff;
+    font-weight: 400;
+    padding: 0;
+}
+
+#data-center a:hover {
+    color: #1633ff;
+}
+
+#data-center a.test {
+    font-size: 12px;
+    color: #00d7d2;
+    padding: 0;
+}
+
+#data-center a.test:hover {
+    color: #1633ff;
+}
 /* ----- FINE LINKS ----- */
 
 /* ----- ALL DOC ----- */
@@ -265,7 +323,7 @@ section {
     background-image: url(https://www.digitalocean.com/static/bg-home-hero-3-bb4b33b77274db09b969f629ad81c4d5.svg);
     background-size: cover;
     background-position: center;
-    padding: 160px 0 64px;
+    padding: 120px 0 64px;
 }
 
 #jumbotron p {
@@ -335,7 +393,7 @@ form {
     height: 77px;
 }
 
-#solutions a.narrow-right {
+#solutions a.angle-right {
     margin-top: 20px;
 }
 
@@ -373,6 +431,130 @@ form {
     margin-bottom: 0;
 }
 
+/* ----- MAIN ----- */
+/* ----- SECTION #FOR-DEVELOPER ----- */
+#for-developer p {
+    color: #5b6987;
+    /* margin-bottom: 70px; */
+}
+
+#for-developer .title {
+    margin-bottom: 64px;
+}
+
+#for-developer .content {
+    position: relative;
+}
+
+#for-developer .content .hidden.pull-left {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#for-developer .content .hidden.pull-right {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#for-developer .content img {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#for-developer .content p {
+    display: inline-block;
+    width: 80%;
+    margin-top: 32px;
+}
+
+#for-developer .dots {
+    margin-top: 32px;
+}
+
+/* ----- MAIN ----- */
+/* ----- SECTION #FOR-BUSINESS ----- */
+#for-business h2 {
+    margin-bottom: 40px;
+}
+
+#for-business h5 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+#for-business p {
+    font-size: 16px;
+}
+
+#for-business .features {
+    margin-bottom: 40px;
+}
+
+#for-business .row > div:last-child .features {
+    margin-bottom: 0;
+}
+
+#for-business a {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+/* ----- MAIN ----- */
+/* ----- SECTION #DATA-CENTER ----- */
+#data-center {
+    background: #031b4e url(https://prismic-io.s3.amazonaws.com/www-static/bb563ec9-49ef-4ceb-8468-da84f1509fcc_bg-map-solid.svg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.data-center-list {
+    margin-top: 64px;
+    margin-left: -35px;
+    margin-right: -35px;
+}
+
+.data-center-info {
+    border-bottom: 1px solid hsla(0,0%,100%,0.2);
+}
+
+.data-center-info:last-child {
+    border-bottom: 1px solid transparent;
+}
+
+.data-center-info span,
+.data-center-info a {
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: bottom;
+}
+
+span.half-lh {
+    line-height: 20px;
+}
+
+.sign {
+    width: 60px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.location {
+    width: 125px;
+    color: #fff;
+    opacity: 0.6;
+    font-size: 13px;
+}
+
+.test {
+    width: 80px;
+}
 
 /* ----- MEDIA QUERY ----- */
 /* collasso HEADER NAVBAR */
@@ -414,6 +596,18 @@ form {
     }
 }
 
+/* formattazione DATA CENTER LIST */
+@media screen and (min-width: 400px) {
+    .data-center-list {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .sign {
+        width: 80px;
+        margin-left: 10px;
+    }
+}
 
 /* XS */
 @media screen and (min-width: 768px) {
@@ -455,9 +649,23 @@ form {
     #configuration .content .row > div:nth-child(-n + 2) .features {
         margin-top: 0;
     }
+
+    /* #datacenter */
+    #data-center .location {
+        width: 350px;
+    }
+
+    #data-center span.half-lh {
+        line-height: 40px;
+    }
 }
 /* SM */
 @media screen and (min-width: 992px) {
+    section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     #jumbotron .content {
         padding-top: 100px;
         text-align: left;
@@ -468,14 +676,44 @@ form {
     }
 
     #configuration {
-        width: 970px;
+        /* width: 970px; */
         margin: auto;
     }
+
+    #for-developer .hidden {
+        display: block!important;
+    }
+
+    #for-business .features {
+        text-align: left;
+    }
+
+    /* #datacenter */
+    #data-center .data-center-info {
+        display: inline-block;
+        float: left;
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+
+    #data-center .location {
+        max-width: 280px;
+    }
+
+    .sign {
+        width: 70px;
+    }
+
 }
 /* MD */
 @media screen and (min-width: 1140px) {
-    #configuration {
+    #configuration .container-fluid,
+    #for-developer .container-fluid {
         width: 1170px;
+    }
+
+    #data-center .data-center-list {
+        padding: 0 101px;
     }
 }
 /* LG */
