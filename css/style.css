@@ -8,11 +8,32 @@ h1 {
     line-height: 120%;
 }
 
+h2 {
+    font-size: 36px;
+    line-height: 120%;
+    margin-top: 0;
+}
+
 h3 {
     font-size: 18px;
     line-height: 36px;
     font-weight: bold;
     margin: auto;
+}
+
+h4 {
+    color: #5b6987;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    margin-bottom: 32px;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
 }
 
 p {
@@ -102,9 +123,19 @@ ul {
     color: #006aff;
 }
 
-#jumbotron small {
-    display: inline-block;
-    margin-top: 16px;
+.btn-light {
+    background-color: transparent;
+    color: rgba(3, 27, 78, 0.6);
+    border: 0;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    transition: color 0.3s, border 0.3s;
+}
+
+.btn-light:hover {
+    background-color: transparent;
+    color: rgb(3, 27, 78);
+    border-bottom: 3px solid #016AFF;
 }
 /* ----- FINE BUTTONS ----- */
 
@@ -139,12 +170,32 @@ header a:hover {
 #header-top a:hover {
     color: #006aff;
 }
+
+#jumbotron small {
+    display: inline-block;
+    margin-top: 16px;
+}
+
+#jumbotron small a {
+    color: white;
+    font-weight: 400;
+    padding: 0;
+}
+
+#jumbotron small a:hover {
+    border-bottom: dotted 1px rgba(255,255,255,0.5);
+}
 /* ----- FINE LINKS ----- */
 
 /* ----- ALL DOC ----- */
 /* ----- STILI ----- */
 .primary {
     background-color: white;
+    color: #031b4e;
+}
+
+.secondary {
+    background-color: #F3F5F9;
     color: #031b4e;
 }
 /* ----- FINE STILI ----- */
@@ -227,7 +278,6 @@ section {
 .main-form {
     width: calc(100% + 30px);
     background-color: white;
-    /* border-radius: 6px; */
     margin-top: 60px;
     margin-left: -15px;
     margin-right: -15px;
@@ -277,6 +327,51 @@ form {
     padding-right: 0;
 }
 /* fine main form */
+/* ----- fine SECTION #JUMBOTRON ----- */
+
+/* ----- MAIN ----- */
+/* ----- SECTION #SOLUTIONS ----- */
+#solutions img {
+    height: 77px;
+}
+
+#solutions a.narrow-right {
+    margin-top: 20px;
+}
+
+#solutions a:hover {
+    color: #1633ff;
+}
+
+/* ----- MAIN ----- */
+/* ----- SECTION #CONFIGURATION ----- */
+#configuration p {
+    color: #5b6987;
+    margin-bottom: 70px;
+}
+
+#configuration ul {
+    box-shadow: 0px -4px 0px -1px #e5e8ed inset;
+}
+
+#configuration li {
+    padding: 0;
+}
+
+#configuration .btn {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#configuration .features {
+    margin-top: 40px;
+}
+
+#configuration .features p {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
 
 
 /* ----- MEDIA QUERY ----- */
@@ -325,6 +420,41 @@ form {
     h1 {
         font-size: 58px;
     }
+
+    /* configuration */
+    #configuration .btn-light {
+        border: 0;
+        border-left: 3px solid transparent;
+    }
+
+    #configuration .btn-light:hover {
+        border-left: 3px solid #016AFF;
+    }
+
+    #configuration nav {
+        text-align: left;
+    }
+
+    #configuration ul {
+        box-shadow: 4px 0px 0px -1px #e5e8ed inset;
+    }
+
+    #configuration li {
+        display: block;
+    }
+
+    #configuration .btn {
+        width: 100%;
+        text-align: left;
+    }
+
+    #configuration .features {
+        text-align: left;
+    }
+
+    #configuration .content .row > div:nth-child(-n + 2) .features {
+        margin-top: 0;
+    }
 }
 /* SM */
 @media screen and (min-width: 992px) {
@@ -337,9 +467,15 @@ form {
         margin-top: 0;
     }
 
+    #configuration {
+        width: 970px;
+        margin: auto;
+    }
 }
 /* MD */
 @media screen and (min-width: 1140px) {
-
+    #configuration {
+        width: 1170px;
+    }
 }
 /* LG */
