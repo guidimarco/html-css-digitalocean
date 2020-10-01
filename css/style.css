@@ -640,7 +640,94 @@ span.half-lh {
 }
 
 /* ----- FOOTER ----- */
+body > footer {
+    background-color: hsl(220,95%,8%);
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 14px;
+    font-weight: normal;
+    padding: 48px 0;
+}
 
+body > footer p {
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+footer a {
+    font-weight: 400;
+    color: white;
+    opacity: 0.5;
+    padding: 0;
+}
+
+footer a:hover {
+    color: white;
+    opacity: 1;
+}
+
+/* parte superiore menu */
+ul.pr-list {
+    width: 100%;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    border-bottom: 1px solid hsla(0,0%,100%,0.2);
+    margin-bottom: 60px;
+}
+
+.sec-list {
+    width: 100%;
+    padding-left: 20px;
+}
+
+li.sec-list ul li {
+    margin-bottom: 10px;
+}
+
+/* parte inf logo e social */
+footer .logo {
+    font-size: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer .logo img {
+    width: 35px;
+    margin-right: 10px;
+}
+
+
+
+.social {
+    display: inline-block;
+    margin: auto;
+    margin-top: 40px;
+}
+
+a.social-ico {
+    display: block;
+    float: left;
+    padding: 5px;
+    margin: 0;
+    /* height: 21px;
+    vertical-align: middle;
+    margin: 0 10px; */
+}
+
+.social a {
+    margin: 0 4px;
+}
+
+.social-ico i,
+.social-ico img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.social a img {
+    width: 100%;
+}
 
 /* ----- MEDIA QUERY ----- */
 /* collasso HEADER NAVBAR */
@@ -683,6 +770,7 @@ span.half-lh {
 }
 
 /* formattazione DATA CENTER LIST */
+/* formattazione FOOTER MENU */
 @media screen and (min-width: 400px) {
     .data-center-list {
         margin-left: 0;
@@ -692,6 +780,19 @@ span.half-lh {
     .sign {
         width: 80px;
         margin-left: 10px;
+    }
+
+    footer .sec-list {
+        width: 50%;
+        float: left;
+    }
+
+    footer .logo {
+        font-size: 14px;
+    }
+
+    footer .logo img {
+        width: 50px;
     }
 }
 
@@ -743,6 +844,15 @@ span.half-lh {
 
     #data-center span.half-lh {
         line-height: 40px;
+    }
+
+    footer .sec-list {
+        width: 20%;
+    }
+
+    .social {
+        margin-top: 0;
+        padding-top: 5px;
     }
 }
 /* SM */
@@ -811,6 +921,14 @@ span.half-lh {
 
     #data-center .data-center-list {
         padding: 0 101px;
+    }
+
+    footer .sec-list {
+        width: calc(100% / 12 * 2);
+    }
+
+    footer .sec-list:first-child {
+        margin-left: calc(100% / 12 * 1);
     }
 }
 /* LG */
