@@ -65,40 +65,34 @@ ul {
     position: relative;
 }
 
+.carousel > .arrow-left {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel > .arrow-right {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .arrow-left::after {
     content: "\2190";
     color: #5b6886;
     font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .arrow-right::after {
     content: "\2192";
     color: rgb(3,27,78);
     font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    transform: translate(50%, -50%);
-}
-
-.carousel > .arrow-left {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.carousel > .arrow-right {
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
 }
 /* ----- FINE CAROUSEL ----- */
 
@@ -122,7 +116,8 @@ ul {
     height: 10px;
     border: 2px solid #0069ff;
     border-radius: 50%;
-    margin: 0 6px;
+    margin: 0 4px;
+    padding: 0;
 }
 
 .dot:first-child {
@@ -203,6 +198,7 @@ ul {
 
 .btn-opposite:hover {
     background-color: rgba(225,225,225,0.9);
+    border-color: rgba(225,225,225,0.9);
 }
 /* ----- FINE BUTTONS ----- */
 
@@ -480,16 +476,22 @@ form {
 }
 
 #configuration ul {
+    width: calc(100% + 40px);
     box-shadow: 0px -4px 0px -1px #e5e8ed inset;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 #configuration li {
+    width: calc(100% / 5 - 3px);
     padding: 0;
 }
 
 #configuration .btn {
-    font-size: 15px;
+    width: 100%;
+    font-size: 13px;
     font-weight: 500;
+    padding: 15px 5px;
 }
 
 #configuration .features {
@@ -506,21 +508,21 @@ form {
 /* ----- SECTION #FOR-DEVELOPER ----- */
 #for-developer p {
     color: #5b6987;
-    /* margin-bottom: 70px; */
 }
 
 #for-developer .title {
     margin-bottom: 64px;
 }
 
-#for-developer .content img {
+#for-developer .carousel img {
     width: 80%;
     margin: 0 auto;
 }
 
-#for-developer .content p {
+#for-developer .carousel p {
     display: inline-block;
     width: 80%;
+    font-size: 16px;
     margin-top: 32px;
 }
 
@@ -554,6 +556,10 @@ form {
 #for-business a {
     font-size: 16px;
     margin: 20px 0;
+}
+
+#for-business a:hover {
+    color: #1633ff;
 }
 
 /* ----- MAIN ----- */
@@ -628,6 +634,15 @@ span.half-lh {
     margin-bottom: 20px;
 }
 
+#review a {
+    padding: 0;
+    font-weight: 400;
+}
+
+#review .card a {
+    font-size: 16px;
+}
+
 #review .dots {
     margin-top: 32px;
 }
@@ -695,8 +710,6 @@ footer .logo img {
     width: 35px;
     margin-right: 10px;
 }
-
-
 
 .social {
     display: inline-block;
@@ -796,6 +809,22 @@ a.social-ico {
     }
 }
 
+@media screen and (min-width: 500px) {
+    #configuration ul {
+        width: auto;
+    }
+
+    #configuration li {
+        width: auto;
+    }
+
+    #configuration .btn {
+        width: auto;
+        font-size: 15px;
+        padding: 15px 20px;
+    }
+}
+
 /* XS */
 @media screen and (min-width: 768px) {
     h1 {
@@ -854,6 +883,12 @@ a.social-ico {
         margin-top: 0;
         padding-top: 5px;
     }
+
+    #for-developer .title {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 /* SM */
 @media screen and (min-width: 992px) {
@@ -893,6 +928,10 @@ a.social-ico {
         float: left;
         margin-left: 11px;
         margin-right: 11px;
+    }
+
+    #data-center .data-center-info:nth-last-of-type(-n+2) {
+        border-bottom: 1px solid transparent;
     }
 
     #data-center .location {
