@@ -1,11 +1,10 @@
-/* ----- RESET E NORMALIZZAZIONE ----- */
-/* ---------- */
-/* ---------- */
+/* ||||| RESET E NORMALIZZAZIONE ||||| */
+/* ||||||||||||||||||||||||||||||||||| */
 body {
     font-family: Roboto, sans-serif;
 }
 
-h1 {
+h1, h2 {
     font-size: 31px;
     line-height: 120%;
     margin-top: 0;
@@ -13,8 +12,6 @@ h1 {
 
 h2 {
     font-size: 36px;
-    line-height: 120%;
-    margin-top: 0;
 }
 
 h3 {
@@ -50,7 +47,7 @@ ul {
     margin-bottom: 0;
 }
 
-/* ----- ALL DOC ----- */
+/* |||||||||| ALL DOC |||||||||| */
 .highlight {
     background-color: rgb(0,215,210);
     color: rgb(3,27,78);
@@ -60,12 +57,13 @@ ul {
     margin-right: 10px;
 }
 
-/* ----- CAROUSEL ----- */
+/* |||||||||| CAROUSEL |||||||||| */
 .carousel {
     position: relative;
 }
 
-.carousel > .arrow-left {
+.carousel > .arrow-left,
+.carousel > .arrow-right {
     display: block;
     position: absolute;
     z-index: 2;
@@ -75,12 +73,8 @@ ul {
 }
 
 .carousel > .arrow-right {
-    display: block;
-    position: absolute;
-    z-index: 2;
     right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
+    left: unset;
 }
 
 .arrow-left::after {
@@ -94,9 +88,9 @@ ul {
     color: rgb(3,27,78);
     font-size: 30px;
 }
-/* ----- FINE CAROUSEL ----- */
+/* \\\\\ FINE CAROUSEL ///// */
 
-/* ----- SIMBOLI ----- */
+/* |||||||||| SYMBOLS |||||||||| */
 .angle-right::after {
     content: "\f105";
     font-family: "Font Awesome 5 Free";
@@ -123,9 +117,9 @@ ul {
 .dot:first-child {
     background-color: #0069ff;
 }
-/* ----- FINE SIMBOLI ----- */
+/* \\\\\ FINE SYMBOLS ///// */
 
-/* ----- BUTTONS ----- */
+/* |||||||||| BUTTONS |||||||||| */
 .btn {
     font-weight: bold;
     padding: 8px 16px;
@@ -148,11 +142,6 @@ ul {
     border-color: #1633ff;
 }
 
-#header-btm .btn-primary:hover {
-    background-color: #006aff;
-    border-color: #006aff;
-}
-
 .btn-outline-primary {
     background-color: transparent;
     border-color: #006aff;
@@ -162,16 +151,6 @@ ul {
 .btn-outline-primary:hover {
     background-color: #006aff;
     color: #fff;
-}
-
-.form-sign-up .btn-outline-primary:hover {
-    background-color: transparent;
-    border-color: #5b6886;
-    color: #363636;
-}
-
-.form-sign-up .btn-outline-primary:hover i {
-    color: #006aff;
 }
 
 .btn-light {
@@ -200,9 +179,9 @@ ul {
     background-color: rgba(225,225,225,0.9);
     border-color: rgba(225,225,225,0.9);
 }
-/* ----- FINE BUTTONS ----- */
+/* \\\\\ FINE BUTTONS ///// */
 
-/* ----- LINKS ----- */
+/* |||||||||| LINKS |||||||||| */
 a {
     display: inline-block;
     color: #0069ff;
@@ -267,9 +246,9 @@ header a:hover {
 #data-center a.test:hover {
     color: #1633ff;
 }
-/* ----- FINE LINKS ----- */
+/* \\\\\ FINE LINKS ///// */
 
-/* ----- STILI ----- */
+/* |||||||||| STYLE |||||||||| */
 .primary {
     background-color: white;
     color: #031b4e;
@@ -283,9 +262,9 @@ header a:hover {
 .opposite {
     color: #fff;
 }
-/* ----- FINE STILI ----- */
+/* \\\\\ FINE STYLE ///// */
 
-/* ----- CITAZIONE ----- */
+/* |||||||||| QUOTE |||||||||| */
 blockquote {
   font-size: 24px;
   border-left: none;
@@ -322,11 +301,9 @@ blockquote cite {
     font-weight: 500;
     font-style: normal;
 }
-/* ----- FINE CITAZIONI ----- */
+/* \\\\\ FINE QUOTE ///// */
 
-
-/* ---------- */
-/* ---------- */
+/* ---------------- */
 /* ----- HTML ----- */
 /* ----- HEADER ----- */
 /* ----- #HEADER-TOP ----- */
@@ -346,6 +323,12 @@ blockquote cite {
     background-color: white;
     line-height: 65px;
     font-size: 15px;
+}
+
+
+#header-btm .btn-primary:hover {
+    background-color: #006aff;
+    border-color: #006aff;
 }
 
 /* ----- HEADER ----- */
@@ -451,6 +434,17 @@ form {
     padding-left: 0;
     padding-right: 0;
 }
+
+.form-sign-up .btn-outline-primary:hover {
+    background-color: transparent;
+    border-color: #5b6886;
+    color: #363636;
+}
+
+.form-sign-up .btn-outline-primary:hover i {
+    color: #006aff;
+}
+
 /* fine main form */
 /* ----- fine SECTION #JUMBOTRON ----- */
 
@@ -847,6 +841,8 @@ a.social-ico {
 
     #configuration ul {
         box-shadow: 4px 0px 0px -1px #e5e8ed inset;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     #configuration li {
